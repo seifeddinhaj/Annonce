@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnnonceTable extends Migration
+class CreateCatalogTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,11 @@ class CreateAnnonceTable extends Migration
      */
     public function up()
     {
-        Schema::create('annonce', function (Blueprint $table) {
+        Schema::create('catalog', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title','40');
-            $table->double('price',15,4);
-            
-            $table->string('description','250');
-            $table->string('type','60');
-            $table->string('adresse','40');
+            $table->string('urlimg','60');
+            $table->integer('annonce_id')->unsigned();
+          $table->foreign('annonce_id')->references('id')->on('annonce');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateAnnonceTable extends Migration
      */
     public function down()
     {
-        Schema::drop('annonce');
+        Schema::drop('catalog');
     }
 }
