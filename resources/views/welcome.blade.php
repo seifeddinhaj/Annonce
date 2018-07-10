@@ -1,14 +1,17 @@
 @extends('layouts.app')
-@section('categori')
-    <div>
-        <h4>
-            All categories
-            <ul>
 
+@section('categori')
+
+        <h4>
+            All categories </h4>
+            @foreach($req as $s)
+            <ul>
+                {{$s->type}}
             </ul>
-        </h4>
-    </div>
+            @endforeach
     @endsection
+
+
 @section('content')
     <div class="row">
         <div class="col-md-3">
