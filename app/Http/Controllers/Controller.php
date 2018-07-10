@@ -15,7 +15,7 @@ class Controller extends BaseController
 
 
         $req=Categories::all();
-        return view('test',compact('req'));
+        return view('welcome',compact('req'));
     }
 
 }

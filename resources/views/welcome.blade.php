@@ -2,12 +2,12 @@
 
 @section('categori')
 
-        <h4>
-            All categories </h4>
+        <h4> All categories </h4>
             @foreach($req as $s)
-            <ul>
-                {{$s->type}}
-            </ul>
+                <div>
+            <a href="categori/{{$s->id}}"> {{$s->type}} </a>
+                </div>
+
             @endforeach
     @endsection
 
