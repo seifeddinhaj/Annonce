@@ -43,5 +43,68 @@ class SubCategoryTableSeeder extends Seeder
                     
                    );
                     DB::table('subcategory')->insert($subcategories3);
+
+
+
+                    $subcategories4 = array(
+                        array('type' => 'bicycles','categories_id' => 4),
+                array('type' => 'Sports and leisures','categories_id' => 4),
+                array('type' => 'Animals' ,'categories_id' => 4),
+                array('type' => 'Movies, Books, Magazines' ,'categories_id' => 4),
+                array('type' => 'Travel and Ticketing' ,'categories_id' => 4),
+                array('type' => 'Art and Collections','categories_id' => 4),
+                array('type' => 'Musical instruments' ,'categories_id' => 4),
+                        
+                       );
+                        DB::table('subcategory')->insert($subcategories4);
+
+
+
+                        $subcategories5= array(
+                            array('type' => 'Phones','categories_id' => 5),
+                    array('type' => 'Image & Sound','categories_id' => 5),
+                    array('type' => 'Laptop' ,'categories_id' => 5),
+                    array('type' => 'Computer accessories and Gadgets' ,'categories_id' => 5),
+                    array('type' => 'Video Games and Consoles' ,'categories_id' => 5),
+                    array('type' => 'Cameras','categories_id' => 5),
+                    array('type' => 'Tablets' ,'categories_id' => 5),
+                    array('type' => 'Televisions' ,'categories_id' => 5),
+                            
+                           );
+                            DB::table('subcategory')->insert($subcategories5);
+
+
+
+                            $subcategories6= array(
+                                array('type' => 'Clothing','categories_id' => 6),
+                        array('type' => 'Shoes','categories_id' => 6),
+                        array('type' => 'Watches and Jewelry' ,'categories_id' => 6),
+                        array('type' => 'Bags and Accessories' ,'categories_id' => 6),
+                        array('type' => 'Child and baby clothes' ,'categories_id' => 6),
+                        array('type' => 'Equipment for child and baby','categories_id' => 6),
+                        array('type' => 'Beauty products' ,'categories_id' => 6),
+                      
+                                
+                               );
+                                DB::table('subcategory')->insert($subcategories6);
+
+                 $subcategories7 = array(
+                 array('type' => 'Business and Commercial Affairs','categories_id' => 7),
+                array('type' => 'Professional Materials','categories_id' => 7),
+                array('type' => 'Stocks and Wholesale' ,'categories_id' => 7),
+                                    
+                    );
+                 DB::table('subcategory')->insert($subcategories7);
+               
+                 
+
+
+                 $subcategories8 = array(
+                    array('type' => 'Jobs','categories_id' => 8),
+                   array('type' => 'Job applications','categories_id' => 8),
+                   array('type' => 'Services' ,'categories_id' => 8),
+                   array('type' => 'Courses and Training' ,'categories_id' => 8),                  
+                       );
+                    DB::table('subcategory')->insert($subcategories8);
     }
 }
