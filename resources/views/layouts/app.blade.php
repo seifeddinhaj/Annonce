@@ -15,10 +15,14 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+
 </head>
 <body>
     <div id="app">
@@ -34,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <input type="text" placeholder="serche">
+                        <input type="text" name="search " placeholder="Search all categories.." class="search">
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -42,10 +46,12 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+                                <a class="nav-link btn-log" href="{{ route('login') }}">{{ __('Login') }}</a>
+
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link btn-log" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -73,7 +79,19 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row">
+                    <!-- categori -->
+                    <div class="col-md-3 ">
+                        @yield('categori')
+                    </div>
+                    <!-- annonce -->
+                    <div class="col-md-9">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 </body>
