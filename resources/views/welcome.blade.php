@@ -2,18 +2,12 @@
 
 @section('content')
 
-<<<<<<< HEAD
-        <h4> All categories </h4>
-            @foreach($req as $s)
-                <div>
-            <a href="{{URL('/subcat/'.$s->id)}}"> {{$s->type}} </a>
-            
-                </div>
-=======
+
+
     <div class="container">
         <div class="row">
             <!-- categori -->
->>>>>>> 010e44e0cf7ddcc3b258bb3cf9806318fb695230
+
 
             <div class="col-md-3 category">
                 <h4> All categories </h4>

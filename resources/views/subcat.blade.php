@@ -1,31 +1,44 @@
 @extends('layouts.app')
-
-@section('categori')
-
-        <h4> All categories </h4>
-            @foreach($req as $s)
-                <div>
-            <a href="#"> {{$s->type}} </a>
-                </div>
-
-            @endforeach
-    @endsection
-
-
 @section('content')
-    <div class="row">
-        <div class="col-md-3">
-            <div class="img">
 
+
+    <div class="container">
+        <div class="row">
+            <!-- categori -->
+
+
+            <div class="col-md-3 category">
+                <a href="{{URL('welcome')}}">All categories</a>
+                <h4>  </h4>
+                @foreach($req as $s)
+                    <div class="x-categori">
+                        <a href=""> {{$s->type}} </a>
+                    </div>
+
+                @endforeach
             </div>
-            <div class="prise">
 
-            </div>
-            <div class="title">
 
+            <!-- annonce -->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="img">
+
+                        </div>
+                        <div class="prise">
+
+                        </div>
+                        <div class="title">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
 
 
 
