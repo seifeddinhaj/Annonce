@@ -63,3 +63,14 @@ p,h1,h2,a:hover{
     display: inline-block;
     vertical-align: super;
 }
+.title-cat{
+    margin-top: 35px;
+
+    border-bottom: 1px solid #e4d5d594;
+}
+.creat-ad{
+    text-align: center;
+}
+
+
+

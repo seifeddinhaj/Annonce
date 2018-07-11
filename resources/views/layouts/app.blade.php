@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('js/style.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -55,23 +56,29 @@
                             </li>
                         @else
                             <li class="nav-item dropdown">
+
+                                <img src="{{Auth::user()->avatar}}" style="width:32px;height: 32px;position: absolute;top: 5px;left: -30px;border-radius: 50% ;">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="{{Auth::user()->avatar}}" style="width:32px;height: 32px;position: absolute;top: 5px;left: -30px;border-radius: 50% ;">
+
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{URL('creat')}}">Creat ad</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
+
                             </li>
+
                         @endguest
                     </ul>
                 </div>
