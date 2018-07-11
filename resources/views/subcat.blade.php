@@ -8,7 +8,7 @@
 
 
             <div class="col-md-3 category">
-                <a href="{{URL('welcome')}}">All categories</a>
+              <span class="flesh-left"> &crarr;</span >  <a href="{{URL('/')}}">All categories</a>
                 <h4>  </h4>
                 @foreach($req as $s)
                     <div class="x-categori">
