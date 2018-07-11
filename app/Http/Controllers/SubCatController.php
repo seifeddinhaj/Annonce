@@ -18,7 +18,12 @@ class SubCatController extends BaseController
        //$req=SubCategory::all();
        $column="categories_id";
         $req=Subcategory::where($column , '=', $id)->get();
-        return view('subcat',compact('req'));
+        // $column="id";
+        //$req1=Categories::where($column,'=',$id);
+        $req1=Categories::select('type')->where('id', $id)->get();
+
+
+        return view('subcat',compact('req','req1'));
     }
 
 }
