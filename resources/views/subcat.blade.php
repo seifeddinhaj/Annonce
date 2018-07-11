@@ -8,19 +8,17 @@
 
 
             <div class="col-md-3 category">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 <a href="{{URL('/')}}">All categories</a>
                 <h4> @foreach($req1 as $ss)
                 {{$ss->type}}
                 @endforeach </h4>
-=======
+
                 <a href="{{URL('welcome')}}">All categories</a>
-=======
+
               <span class="flesh-left"> &crarr;</span >  <a href="{{URL('/')}}">All categories</a>
->>>>>>> 4ccabe9279ba27c943723a2ce4c0d59deab91cc2
+
                 <h4>  </h4>
->>>>>>> 47424d9077af17bdb445057acac7c778f1810fe9
                 @foreach($req as $s)
                     <div class="x-categori">
                         <a href=""> {{$s->type}} </a>
