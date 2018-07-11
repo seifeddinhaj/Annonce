@@ -3,10 +3,12 @@ body{
     font-family: 'Noto Sans', sans-serif;
 
 }
-a,p,h1,h2,a:hover{
+
+p,h1,h2,a:hover{
     font-family: 'Noto Sans', sans-serif;
 
 }
+
 .nav-link >.btn-log{
     color: white;
     background-color:#ee493a ;
@@ -34,3 +36,19 @@ a,p,h1,h2,a:hover{
     width: 100%;
 }
 /*end of input search */
+
+.category a {
+    font-size: 18px;
+    padding: 15px;
+    color: #5f5f5f;
+    text-decoration: none !important;
+}
+.category a:hover{
+    color: #000000;
+}
+.category{
+    border-bottom: 1px solid #e4d5d594;
+}
+.x-categori{
+  padding: 15px 0 15px 0;
+}
