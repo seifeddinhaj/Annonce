@@ -10,7 +10,7 @@
                 <h4> All categories </h4>
                 @foreach($req as $s)
                     <div class="x-categori">
-                        <a href="categori/{{$s->id}}"> {{$s->type}} </a>
+                        <a href="{{URL('/subcat/'.$s->id)}}"> {{$s->type}} </a>
                     </div>
 
                 @endforeach
