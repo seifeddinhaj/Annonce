@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Categories;
+use App\Annonce;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,9 +14,10 @@ class Controller extends BaseController
     public function index()
     {
 
+        $req1=Annonce::all();
 
         $req=Categories::all();
-        return view('welcome',compact('req'));
+        return view('welcome',compact('req','req1'));
     }
 
 }

@@ -30,9 +30,8 @@ class HomeController extends Controller
 {
 
 
-   $req=Categories::all();
-   $req1=Annonce::all();
-   return view('/',compact('req','req1'));
+
+
 }
 
 }
