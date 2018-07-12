@@ -24,6 +24,10 @@ class CreateAnnonceTable extends Migration
         $table->foreign('user_id')->references('id')->on('users');
              $table->integer('categories_id')->unsigned();
         $table->foreign('categories_id')->references('id')->on('categories');
+
+
+        $table->integer('subcategory_id')->unsigned();
+        $table->foreign('subcategory_id')->references('id')->on('subcategory');
             $table->timestamps();
         });
     }

@@ -22,18 +22,26 @@
 
             <!-- annonce -->
             <div class="col-md-9">
+
+
                 <div class="row">
-                    <div class="col-md-3">
+                    @foreach($req1 as $annonce)
+                    <div class="col-md-3 text-center">
+                        <a href="/">
                         <div class="img">
-
+                        <img src="{{URL::asset('annonceImg/bmw.jpg')}}" alt="img Ad" class="img-thumbnail">
                         </div>
-                        <div class="prise">
-
+                        <div class="price">
+                        <p>{{$annonce->price}} DT </p>
                         </div>
+
                         <div class="title">
-
+                        <p>{{$annonce->title}}</p>
                         </div>
                     </div>
+                        </a>
+                    @endforeach
+
                 </div>
             </div>
         </div>

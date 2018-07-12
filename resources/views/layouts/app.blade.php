@@ -11,12 +11,16 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{asset('js/style.js')}}"></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 
     <!-- Styles -->
@@ -24,8 +28,16 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 
+
 </head>
 <body>
+
+<div class="contain">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -89,5 +101,18 @@
             @yield('content')
         </main>
     </div>
+<script>
+    $(document).ready(function() {
+
+        $("#app").hide();
+
+        setTimeout(function () {
+            $(".contain").hide();
+            $("#app").show(1000);
+
+        }, 3000);
+
+    });
+</script>
 </body>
 </html>

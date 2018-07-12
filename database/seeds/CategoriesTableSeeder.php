@@ -16,14 +16,12 @@ class CategoriesTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   $categories = array(
+    {  $categories = array(
         array('type' => 'vehicles','Icon' => 'default'),
         array('type' => 'Buildings','Icon' => 'default'),
-        array('type' => 'For the House and Garden
-        ' ,'Icon' => 'default'),
+        array('type' => 'For the House and Garden' ,'Icon' => 'default'),
         array('type' => 'Leisure and Entertainment' ,'Icon' => 'default'),
-        array('type' => '
-        Computer and Multimedia' ,'Icon' => 'default'),
+        array('type' => 'Computer and Multimedia' ,'Icon' => 'default'),
         array('type' => 'Clothing and Well Being','Icon' => 'default'),
         array('type' => 'Entreprises' ,'Icon' => 'default'),
         array('type' => 'Employment and Services','Icon' => 'default'),);

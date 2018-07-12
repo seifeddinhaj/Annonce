@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Categories;
+use App\Annonce;
 class HomeController extends Controller
 {
     /**
@@ -29,8 +30,8 @@ class HomeController extends Controller
 {
 
 
-   $req=Categories::all();
-   return view('test',compact('req'));
+
+
 }
 
 }

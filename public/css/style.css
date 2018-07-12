@@ -3,7 +3,11 @@ body{
     font-family: 'Noto Sans', sans-serif;
 
 }
-
+a, a:hover{
+    text-decoration: none !important;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+}
 p,h1,h2,a:hover{
     font-family: 'Noto Sans', sans-serif;
 
@@ -74,3 +78,59 @@ p,h1,h2,a:hover{
 
 
 
+
+/* line 5 */
+.contain {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* line 10 */
+.contain .circle {
+    width: 6px;
+    height: 6px;
+    background: #4b646f;
+    position: absolute;
+    border-radius: 50%;
+    animation-timing-function: linear;
+    animation: anim-04 2s linear infinite;
+    transform-origin: 50% 50%;
+}
+/* line 20 */
+.contain .circle:nth-child(2) {
+    animation-delay: 1.33333s;
+}
+/* line 20 */
+.contain .circle:nth-child(3) {
+    animation-delay: 0.66667s;
+}
+
+@keyframes anim-04 {
+    0% {
+        transform-origin: 100% -100%;
+        transform: rotate(0) translate(0);
+    }
+    16.66666% {
+        transform-origin: 100% -100%;
+        transform: rotate(360deg) translate(20px);
+    }
+    33.333333% {
+        transform-origin: 100% -100%;
+        transform: rotate(360deg) translate(20px);
+    }
+    50.000001% {
+        transform-origin: 50% 0%;
+        transform: rotate(360deg) translateX(10px);
+    }
+    66.666666% {
+        transform-origin: 50% 0%;
+        transform: rotate(360deg) translateX(10px);
+    }
+    83.33333% {
+        transform: rotate(360deg) translateX(0);
+    }
+    100% {
+        transform: rotate(360deg) translateX(0);
+    }
+}

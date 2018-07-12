@@ -440,9 +440,10 @@ class ComposerStaticInitcd44eaa2ceaeddadc2b232a656809cbb
     );
 
     public static $classMap = array (
+        'AnnonceTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AnnonceTableSeeder.php',
         'App\\Annonce' => __DIR__ . '/../..' . '/app/Annonce.php',
         'App\\Catalog' => __DIR__ . '/../..' . '/app/Catalog.php',
-        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
         'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -452,6 +453,7 @@ class ComposerStaticInitcd44eaa2ceaeddadc2b232a656809cbb
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\SubCatController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubCatController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -489,6 +491,7 @@ class ComposerStaticInitcd44eaa2ceaeddadc2b232a656809cbb
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'CatalogueTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CatalogueTableSeeder.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
         'Composer\\Autoload\\AutoloadGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/AutoloadGenerator.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassLoader.php',
