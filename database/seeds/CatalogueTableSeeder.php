@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use app\Catalog;
 class CatalogueTableSeeder extends Seeder
 {
     /**
@@ -11,6 +11,7 @@ class CatalogueTableSeeder extends Seeder
      */
     public function run()
     {
+        if (Catalog::count() == 0) {
         $catalog = array(
             array('urlimg' => 'annonceImg/merc.jpg','annonce_id' => 1),
             array('urlimg' => 'annonceImg/merc.jpg','annonce_id' => 1),
@@ -22,5 +23,6 @@ class CatalogueTableSeeder extends Seeder
             array('urlimg' => 'annonceImg/bmw.jpg','annonce_id' => 4),
         );
             DB::table('catalog')->insert($catalog);
+        }
 }
 }

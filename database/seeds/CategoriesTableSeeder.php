@@ -7,6 +7,7 @@ use TCG\Voyager\Models\DataType;
 use TCG\Voyager\Models\Menu;
 use TCG\Voyager\Models\MenuItem;
 use TCG\Voyager\Models\Permission;
+use app\Categories;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -16,7 +17,10 @@ class CategoriesTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {  $categories = array(
+    {  
+        
+        if (Categories::count() == 0) {
+        $categories = array(
         array('type' => 'vehicles','Icon' => 'default'),
         array('type' => 'Buildings','Icon' => 'default'),
         array('type' => 'For the House and Garden' ,'Icon' => 'default'),
@@ -26,6 +30,8 @@ class CategoriesTableSeeder extends Seeder
         array('type' => 'Entreprises' ,'Icon' => 'default'),
         array('type' => 'Employment and Services','Icon' => 'default'),);
         DB::table('categories')->insert($categories);
+    
+    }
     }
 
     /**
