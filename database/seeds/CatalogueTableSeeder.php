@@ -11,8 +11,8 @@ class CatalogueTableSeeder extends Seeder
      */
     public function run()
     {
-        if (Catalog::count() == 0) {
-        $catalog = array(
+        
+        $catalogg = array(
             array('urlimg' => 'annonceImg/merc.jpg','annonce_id' => 1),
             array('urlimg' => 'annonceImg/merc.jpg','annonce_id' => 1),
             array('urlimg' => 'annonceImg/bmw.jpg' ,'annonce_id' => 2),
@@ -22,7 +22,7 @@ class CatalogueTableSeeder extends Seeder
             array('urlimg' => 'annonceImg/bmw.jpg' ,'annonce_id' => 4),
             array('urlimg' => 'annonceImg/bmw.jpg','annonce_id' => 4),
         );
-            DB::table('catalog')->insert($catalog);
-        }
+            DB::table('catalog')->insert($catalogg);
+        
 }
 }

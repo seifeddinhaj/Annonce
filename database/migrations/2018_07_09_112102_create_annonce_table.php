@@ -12,7 +12,7 @@ class CreateAnnonceTable extends Migration
      */
     public function up()
     {
-        Schema::create('annonce', function (Blueprint $table) {
+        Schema::create('annonces', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title','40');
             $table->double('price',15,4);

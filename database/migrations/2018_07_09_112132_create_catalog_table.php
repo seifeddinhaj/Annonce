@@ -16,7 +16,7 @@ class CreateCatalogTable extends Migration
             $table->increments('id');
             $table->string('urlimg','60');
             $table->integer('annonce_id')->unsigned();
-          $table->foreign('annonce_id')->references('id')->on('annonce');
+          $table->foreign('annonce_id')->references('id')->on('annonces');
             $table->timestamps();
         });
     }
