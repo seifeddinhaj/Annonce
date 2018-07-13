@@ -11,7 +11,7 @@ class AnnonceTableSeeder extends Seeder
      */
     public function run()
     {
-        if (Annonce::count() == 0) {
+
         $annoces = array(
             array('title' => 'Mercedes c200','price' => 250000,'description' => 'new one','type' => 'for sale','adresse' => 'Sousse','user_id' => 1,'categories_id' => 1,'subcategory_id' => 1),
             array('title' => 'bmw M3','price' => 555555,'description' => 'm power ','type' => 'for sale','adresse' => 'Sousse','user_id' => 1,'categories_id' => 1,'subcategory_id' => 1),
@@ -20,7 +20,7 @@ class AnnonceTableSeeder extends Seeder
         );
 
             DB::table('annonces')->insert($annoces);
-        }
+
 
     }
 }
