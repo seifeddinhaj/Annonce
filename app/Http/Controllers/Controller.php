@@ -23,6 +23,7 @@ class Controller extends BaseController
         ->groupBy('catalog.annonce_id')
         //->distinct('catalog.annonce_id')
         ->get();
+        //seif
 
         $req=Categories::all();
         return view('welcome',compact('req','req1','req2'));
