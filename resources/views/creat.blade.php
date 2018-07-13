@@ -7,19 +7,19 @@
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
                 <div class="stepwizard-step col-xs-3">
-                    <a href="#step-1" type="button" class="nrml active">1</a>
+                    <a href="#step-1"  class="nrml active">1</a>
                     <p><small>Shipper</small></p>
                 </div>
                 <div class="stepwizard-step col-xs-3">
-                   <div class="tst"> <a href="#step-2" type="button" class="nrml" disabled="disabled">2</a></div>
+                    <a href="#step-2" class="nrml" disabled="disabled">2</a>
                     <p><small>Destination</small></p>
                 </div>
                 <div class="stepwizard-step col-xs-3">
-                    <a href="#step-3" type="button" class="nrml" disabled="disabled">3</a>
+                    <a href="#step-3"  class="nrml" disabled="disabled">3</a>
                     <p><small>Schedule</small></p>
                 </div>
                 <div class="stepwizard-step col-xs-3">
-                    <a href="#step-4" type="button" class="nrml" disabled="disabled">4</a>
+                    <a href="#step-4"  class="nrml" disabled="disabled">4</a>
                     <p><small>Cargo</small></p>
                 </div>
             </div>
