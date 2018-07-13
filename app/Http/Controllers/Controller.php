@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Categories;
 use App\Annonce;
+use App\Catalog;
+use DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -15,9 +17,15 @@ class Controller extends BaseController
     {
 
         $req1=Annonce::all();
+        $req2=DB::table('annonces')
+        ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
+        ->select('annonces.*','catalog.urlimg','catalog.annonce_id' )
+        ->groupBy('catalog.annonce_id')
+        //->distinct('catalog.annonce_id')
+        ->get();
 
         $req=Categories::all();
-        return view('welcome',compact('req','req1'));
+        return view('welcome',compact('req','req1','req2'));
     }
 
 }

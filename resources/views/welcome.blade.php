@@ -7,8 +7,11 @@
     <div class="container">
         <div class="row">
             <!-- categori -->
-
-
+            <!--@foreach($req2 as $c)
+           {{$c->urlimg}}
+            {{$c->price}}
+            {{$c->id}}
+            @endforeach-->
             <div class="col-md-3 category">
                 <h4> All categories </h4>
                 @foreach($req as $s)
@@ -25,11 +28,11 @@
 
 
                 <div class="row">
-                    @foreach($req1 as $annonce)
+                    @foreach($req2 as $annonce)
                     <div class="col-md-3 text-center">
                         <a href="/">
                         <div class="img">
-                        <img src="{{URL::asset('annonceImg/bmw.jpg')}}" alt="img Ad" class="img-thumbnail">
+                        <img src="{{$annonce->urlimg}}" alt="img Ad" class="img-thumbnail">
                         </div>
                         <div class="price">
                         <p>{{$annonce->price}} DT </p>
