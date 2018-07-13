@@ -23,4 +23,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/subcat/{catId}', 'SubCatController@index')->name('subcat');
 ROute::get('/creat','CreatController@index')->name('creat');
+Route::get('/details/{annId}', 'DetailsController@details')->name('details');
+Route::get('/subcatshow/{catid}/{subcatid}', 'SubCatController@show')->name('subcatshow');
 
