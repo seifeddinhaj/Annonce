@@ -29,14 +29,12 @@
 
 
 
+
+
 </head>
 <body>
 
-<div class="contain">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-</div>
+
 
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
@@ -101,18 +99,6 @@
             @yield('content')
         </main>
     </div>
-<script>
-    $(document).ready(function() {
 
-        $("#app").hide();
-
-        setTimeout(function () {
-            $(".contain").hide();
-            $("#app").show(1000);
-
-        }, 3000);
-
-    });
-</script>
 </body>
 </html>
