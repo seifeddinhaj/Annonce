@@ -563,7 +563,7 @@ p,h1,h2,a:hover{
 
 
 .stepwizard-step p {
-    margin-top: 0px;
+    margin-top: 20px;
     color:#666;
 }
 .stepwizard-row {
@@ -592,27 +592,21 @@ p,h1,h2,a:hover{
     background-color: #ccc;
     z-index: 0;
 }
+
+
 .stepwizard-step {
     display: table-cell;
     text-align: center;
     position: relative;
 }
-.btn-circle {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    padding: 6px 0;
-    font-size: 12px;
-    line-height: 1.428571429;
-    border-radius: 15px;
-}
+
  .active{
-    color: green;
-    border-radius: 50px;
+     background-color:#d8d8d859 ;
 }
  .nrml{
-     padding: 20px;
- }
- .tst{
+     position: absolute;
+     top: -8px;
+
      border-radius: 50%;
+     padding: 5px;
  }
