@@ -28,5 +28,6 @@ class Controller extends BaseController
         $req=Categories::all();
         return view('welcome',compact('req','req1','req2'));
     }
-
+    
+   
 }

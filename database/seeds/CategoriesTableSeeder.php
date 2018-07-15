@@ -18,7 +18,11 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {  
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 7484d9f34d4364113f2d9c70bfa94ca4e47b19ce
         $categories = array(
         array('type' => 'vehicles','Icon' => 'default'),
         array('type' => 'Buildings','Icon' => 'default'),
@@ -30,7 +34,10 @@ class CategoriesTableSeeder extends Seeder
         array('type' => 'Employment and Services','Icon' => 'default'),);
         DB::table('categories')->insert($categories);
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7484d9f34d4364113f2d9c70bfa94ca4e47b19ce
     }
 
     /**

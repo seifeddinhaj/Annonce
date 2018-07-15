@@ -12,12 +12,16 @@ class CatalogueTableSeeder extends Seeder
     public function run()
     {
 
+<<<<<<< HEAD
 
 
 
         
         $catalog = array(
 
+=======
+        $catalog = array(
+>>>>>>> 7484d9f34d4364113f2d9c70bfa94ca4e47b19ce
             array('urlimg' => 'annonceImg/merc.jpg','annonce_id' => 1),
             array('urlimg' => 'annonceImg/merc.jpg','annonce_id' => 1),
             array('urlimg' => 'annonceImg/bmw.jpg' ,'annonce_id' => 2),
@@ -27,6 +31,7 @@ class CatalogueTableSeeder extends Seeder
             array('urlimg' => 'annonceImg/bmw.jpg' ,'annonce_id' => 4),
             array('urlimg' => 'annonceImg/bmw.jpg','annonce_id' => 4),
         );
+<<<<<<< HEAD
 
             DB::table('catalog')->insert($catalog);
 
@@ -34,5 +39,9 @@ class CatalogueTableSeeder extends Seeder
 
         
 
+=======
+            DB::table('catalog')->insert($catalog);
+
+>>>>>>> 7484d9f34d4364113f2d9c70bfa94ca4e47b19ce
 }
 }

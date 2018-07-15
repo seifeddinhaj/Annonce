@@ -610,3 +610,26 @@ p,h1,h2,a:hover{
      border-radius: 50%;
      padding: 5px;
  }
+/* Detail ad */
+.detail{
+    margin-top: 50px;
+}
+.info{
+    border-bottom: 1px solid #e4d5d594;
+}
+
+.info .date, .info .title {
+    margin-top: 20px;
+}
+
+.more-info{
+    border-bottom: 1px solid #e4d5d594;
+}
+.more-info .local{
+    color: #a2a2a2;
+    font-size: 28px;
+    margin-top: 20px;
+}
+.desc{
+    margin-top: 50px;
+}

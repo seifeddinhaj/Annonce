@@ -10,9 +10,6 @@
             <div class="col-md-3 category">
 
 
-
-
-
               <span class="flesh-left"> &crarr;</span >  <a href="{{URL('/')}}">All categories</a>
 
                 <h4 class="title-cat"> @foreach($req1 as $ss)
@@ -38,7 +35,7 @@
                     <div class="col-md-3 text-center">
                         <a href="{{URL('/details/'.$annonce->id)}}">
                         <div class="img">
-                        <img src="{{asset($annonce->urlimg)}}" alt="img Ad" class="img-thumbnail">
+                        <img src="{{$annonce->urlimg}}" alt="img Ad" class="img-thumbnail">
                         </div>
                         <div class="price">
                         <p>{{$annonce->price}} DT </p>

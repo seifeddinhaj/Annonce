@@ -142,7 +142,7 @@
                 <div class="row">
                     @foreach($req2 as $annonce)
                     <div class="col-md-3 text-center">
-                        <a href="/">
+                        <a href="{{URL('/details/'.$annonce->annonce_id)}}">
                         <div class="img">
                         <img src="{{$annonce->urlimg}}" alt="img Ad" class="img-thumbnail">
                         </div>
