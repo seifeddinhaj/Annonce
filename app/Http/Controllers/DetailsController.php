@@ -25,7 +25,16 @@ class DetailsController extends Controller
        // $user = DB::table('annonces')->where('id', $id)->get();
         $req1=Catalog::select('urlimg')->where('annonce_id', $id)->get();
         $detail=Annonce::select('*')->where('id',$id)->get();
-        return view('details',compact('req1','detail'));
+
+
+        $user=DB::table('users')
+        ->join('annonces', 'users.id', '=', 'annonces.user_id')
+        ->select('users.*' )
+        ->where('annonces.id','=',$id)
+        
+        //->distinct('catalog.annonce_id')
+        ->get();
+        return view('details',compact('req1','detail','user'));
     }
     /**
      * Show the form for creating a new resource.

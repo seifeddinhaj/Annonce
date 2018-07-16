@@ -22,8 +22,15 @@
                 <h4>{{$annonce->title}}</h4>
             </div>
             <div class="date">
-                <p> Dated : {{$annonce->created_at}}</p>
+                <p> Dated : {{$annonce->created_at}}
+                </p>
+                
             </div>
+                @endforeach
+                @foreach($user as $us)
+                <p>
+                user :{{$us->name}}
+                </p>
                 @endforeach
         </div>
         <div class="more-info">
