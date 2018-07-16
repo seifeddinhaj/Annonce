@@ -28,7 +28,7 @@
         <form role="form" style="margin-top: 50px;">
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Shipper</h3>
+                    <h3 class="panel-title">add an ad</h3>
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -59,7 +59,9 @@
                     <div class="form-group">
                         <label class="control-label" for="Description"> Catégorie</label>
                         <select class="form-control">
-                            <option>Default select</option>
+                            @foreach($req as $cat )
+                            <option value="{{$cat->id}}">{{$cat->type}}</option>
+                                @endforeach
                         </select>
                     </div>
 
@@ -69,18 +71,24 @@
 
             <div class="panel panel-primary setup-content" id="step-3">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Schedule</h3>
+                    <h3 class="panel-title">add an ad</h3>
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <label class="control-label">Company Name</label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                        <label class="control-label">Price</label>
+                        <input  type="number" required="required" class="form-control" placeholder="0.00" value="0.00" />
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Company Address</label>
-                        <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                        <label class="control-label" for="location">Location</label>
+
+                        <select class="form-control" id="location">
+                            <option value="Tunis">Tunis</option>
+                            <option value="Gabes">Gabes</option>
+                            <option value="Sfax">Sfax</option>
+                            <option value="Sousse">Sousse</option>
+                        </select>
                     </div>
-                    <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
+                    <input class="btn  btn-success nextBtn float-right" type="submit" value="Valid">
                 </div>
             </div>
 

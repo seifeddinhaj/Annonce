@@ -21,9 +21,9 @@ class Controller extends BaseController
         ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
         ->select('annonces.*','catalog.urlimg','catalog.annonce_id' )
         ->groupBy('catalog.annonce_id')
-        //->distinct('catalog.annonce_id')
+
         ->get();
-        //seif
+
 
         $req=Categories::all();
         return view('welcome',compact('req','req1','req2'));
