@@ -652,13 +652,19 @@ p,h1,h2,a:hover{
     color: #666666;
 }
 .small-img img{
+    border:1px solid #d2d0d0;
     width: 100px;
     height: 90px;
+    padding: 3px;
+
+}
+.small-img{
+    margin-top: 30px;
+
 }
 
-.mySlides :before{
+.mySlides {
     display: none;
+    width: 100%;
+    height: 350px;
 }
-
-.mySlides {display:none}
-.demo {cursor:pointer}

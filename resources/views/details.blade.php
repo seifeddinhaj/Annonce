@@ -12,43 +12,17 @@
     <div class="col-md-12">
    <!-- Slide img -->
 
-
-        <div class="w3-content" style="max-width:1200px">
+        <div class="w3-content w3-display-container">
             @foreach($req1 as $annonce)
-            <img class="mySlides" src="{{asset($annonce->urlimg)}}" style="width:100%">
+            <img class="mySlides" src="{{asset($annonce->urlimg)}}" >
+
             @endforeach
-
-            <div class="w3-row-padding w3-section">
-
-                @foreach($req1 as $annonce)
-                <div class="w3-col s4">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="{{asset($annonce->urlimg)}}" style="width:100%" onclick="currentDiv(i++)">
-                </div>
-                @endforeach
-            </div>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
 
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="small-img">
         @foreach($req1 as $annonce)
@@ -96,9 +70,7 @@
     </div>
 
     @endforeach
-            <div>
-                <input type="tel" class="btn btn-primary" value="send">
-            </div>
+            
         </div>
 
     </div>
