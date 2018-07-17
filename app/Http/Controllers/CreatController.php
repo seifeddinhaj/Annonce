@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Categories;
 use Illuminate\Http\Request;
-use App\Categories;
+
 use App\Subcategory;
 
 class CreatController extends Controller

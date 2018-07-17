@@ -26,7 +26,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -67,7 +67,7 @@
                         @else
                             <li class="nav-item dropdown">
 
-                                <img src="{{Auth::user()->avatar}}" style="width:32px;height: 32px;position: absolute;top: 5px;left: -30px;border-radius: 50% ;">
+                                <img src="{{asset(Auth::user()->avatar)}}" style="width:32px;height: 32px;position: absolute;top: 5px;left: -30px;border-radius: 50% ;">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 
                                     {{ Auth::user()->name }} <span class="caret"></span>

@@ -8,15 +8,15 @@
             <div class="stepwizard-row setup-panel">
                 <div class="row">
                 <div class="stepwizard-step col-xs-4 col-md-4">
-                    <a href="#step-1"  class="nrml active"><img src="icon/camera.png" alt="img of Ad"></a>
+                    <a href="#step-2"  class="nrml active"><img src="icon/add.png" alt="img of Ad"></a>
                     <p><small></small></p>
                 </div>
                 <div class="stepwizard-step col-xs-4 col-md-4">
-                    <a href="#step-2" class="nrml" disabled="disabled"><img src="icon/add.png" alt="desc of ad"></a>
+                    <a href="#step-3" class="nrml" disabled="disabled"><img src="icon/mapn.png" alt="desc of ad"></a>
                     <p><small></small></p>
                 </div>
                 <div class="stepwizard-step col-xs-4 col-md-4">
-                    <a href="#step-3"  class="nrml" disabled="disabled"> <img src="icon/mapn.png" alt="localisation"> </a>
+                    <a href="#step-1"  class="nrml" disabled="disabled"> <img src="icon/camera.png" alt="localisation"> </a>
                     <p><small></small></p>
                 </div>
                 </div>
@@ -25,22 +25,22 @@
         <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-        <form role="form" style="margin-top: 50px;">
+        <form role="form" style="margin-top: 50px;" action="#">
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
                     <h3 class="panel-title">add an ad</h3>
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <label class="control-label">First Name</label>
-                        <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                        <label class="control-label">Photos</label>
+                        <input type="file" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Last Name</label>
-                        <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
                     </div>
-                    <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
+
+
                 </div>
+                <input class="btn  btn-success nextBtn float-right" type="submit" value="Valid">
             </div>
 
             <div class="panel panel-primary setup-content" id="step-2">
@@ -88,7 +88,7 @@
                             <option value="Sousse">Sousse</option>
                         </select>
                     </div>
-                    <input class="btn  btn-success nextBtn float-right" type="submit" value="Valid">
+                    <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
                 </div>
             </div>
 
