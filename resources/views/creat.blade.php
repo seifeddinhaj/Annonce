@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="container">
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
@@ -56,15 +56,26 @@
                         <label class="control-label" for="Description">Description</label>
                         <textarea class="form-control" rows="2" id="Description" minlength="3" required></textarea>
                     </div>
+                     <form class="form-horizontal" role="form" method="POST" action="">
+                            {{ csrf_field() }}
                     <div class="form-group">
                         <label class="control-label" for="Description"> Catégorie</label>
-                        <select class="form-control">
+                        
+                        <select class="form-control categories" id="categories" name="cat">
+                          
                             @foreach($req as $cat )
-                            <option value="{{$cat->id}}">{{$cat->type}}</option>
+                            <option name="{{$cat->id}}">{{$cat->type}}</option>
                                 @endforeach
                         </select>
-                    </div>
+                        {{var_dump($select)}}
+                        <select class="form-control subcategory">
+                             @foreach($data as $row )
+                            <option value="">{{$row->type}}</option>
+                                @endforeach
+                        </select>
 
+                    </div>
+</form>
                     <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
                 </div>
             </div>
@@ -97,5 +108,10 @@
         </div>
         </div>
     </div>
+
+
+
+
+
 
 @endsection

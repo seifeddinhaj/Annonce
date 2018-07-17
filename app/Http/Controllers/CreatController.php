@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Categories;
+
 use Illuminate\Http\Request;
 use App\Categories;
 use App\Subcategory;
+use DB;
+use Illuminate\Support\Facades\Input;
 
 class CreatController extends Controller
 {
@@ -13,10 +15,26 @@ class CreatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexx(Request $request)
     {
         $req=Categories::all();
-        return view('creat',compact('req'));
+        //$select=$type;
+       $select=$request->all();
+        //$select=$request->all();
+      //  $select = $request->input('categories');
+       $data =DB::table('categories')
+       ->join('subcategory', 'categories.id', '=', 'subcategory.categories_id')
+        ->where('categories.type','=','Buildings')
+        ->get();
+        return view('creat',compact('req','data','select'));
+
+    }
+    function fetch (Request $request){
+        $select=$request->all();
+       $data =DB::table('subcategory')
+        ->where('categories_id','=',$select)
+        ->get();
+         return view('creat',compact('data','select'));
     }
 
     /**
