@@ -633,3 +633,32 @@ p,h1,h2,a:hover{
 .desc{
     margin-top: 50px;
 }
+.user{
+    margin-top: 20px;
+}
+.avatar-user{
+    display: flex;
+}
+.user img{
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+}
+.more-detail{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.more-detail p {
+    color: #666666;
+}
+.small-img img{
+    width: 100px;
+    height: 90px;
+}
+
+.mySlides :before{
+    display: none;
+}
+
+.mySlides {display:none}
+.demo {cursor:pointer}

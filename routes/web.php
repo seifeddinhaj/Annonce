@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
+Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/subcat/{catId}', 'SubCatController@index')->name('subcat');
