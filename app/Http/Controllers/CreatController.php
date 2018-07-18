@@ -72,7 +72,7 @@ class CreatController extends Controller
        // $annonce->created_at= $request['description'];
         //$annonce->updated_at= $request['description'];
 
-
+        $annonce= new Annonce();
         $annonce->title= 'new carrr';
         $annonce->description= 'fiat 500';
         $annonce->price= 548712;
