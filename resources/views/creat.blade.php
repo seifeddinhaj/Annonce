@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="container">
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
@@ -25,7 +25,7 @@
         <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-        <form role="form" style="margin-top: 50px;" action="#">
+        <form role="form" method="post" style="margin-top: 50px;"action="CreatAn/store">
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
                     <h3 class="panel-title">add an ad</h3>
@@ -33,7 +33,7 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Photos</label>
-                        <input type="file" class="form-control"/>
+                        <input type="file" class="form-control" multiple />
                     </div>
                     <div class="form-group">
                     </div>
@@ -50,22 +50,31 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label" for="title">Title</label>
-                        <textarea class="form-control" rows="2" id="title" minlength="3" required></textarea>
+                        <textarea class="form-control" name="title" rows="2" id="title" minlength="3" required></textarea>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="Description">Description</label>
-                        <textarea class="form-control" rows="2" id="Description" minlength="3" required></textarea>
+                        <textarea class="form-control" rows="2" name="description" id="Description" minlength="3" required></textarea>
                     </div>
+                     
                     <div class="form-group">
                         <label class="control-label" for="Description"> Catégorie</label>
-                        <select class="form-control">
+                        
+                        <select class="form-control categories" id="categories" name="categories">
+                          
                             @foreach($req as $cat )
-                            <option value="{{$cat->id}}">{{$cat->type}}</option>
+                            <option name="{{$cat->id}}">{{$cat->type}}</option>
                                 @endforeach
                         </select>
-                    </div>
+                        {{var_dump($select)}}
+                        <select class="form-control subcategory" name="subcategory">
+                             @foreach($data as $row )
+                            <option value="{{$row->id}}">{{$row->type}}</option>
+                                @endforeach
+                        </select>
 
-                    <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
+                    </div>
+        <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
                 </div>
             </div>
 
@@ -76,12 +85,12 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Price</label>
-                        <input  type="number" required="required" class="form-control" placeholder="0.00" value="0.00" />
+                        <input  type="number" required="required" class="form-control" name="price" placeholder="0.00" value="0.00" />
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="location">Location</label>
 
-                        <select class="form-control" id="location">
+                        <select class="form-control" name="location" id="location">
                             <option value="Tunis">Tunis</option>
                             <option value="Gabes">Gabes</option>
                             <option value="Sfax">Sfax</option>
@@ -97,5 +106,10 @@
         </div>
         </div>
     </div>
+
+
+
+
+
 
 @endsection

@@ -19,10 +19,12 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
+Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/subcat/{catId}', 'SubCatController@index')->name('subcat');
-ROute::get('/creat','CreatController@index')->name('creat');
+ROute::get('/creat','CreatController@indexx')->name('creat');
+Route::post('creat', ['as'=>'creat','uses'=>'CreatController@indexx']);
 Route::get('/details/{annId}', 'DetailsController@details')->name('details');
 Route::get('/subcatshow/{catid}/{subcatid}', 'SubCatController@show')->name('subcatshow');
 

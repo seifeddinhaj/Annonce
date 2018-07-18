@@ -54,6 +54,51 @@ $(document).ready(function() {
     }, 3000);
 
 });
+<<<<<<< HEAD
+
+
+  
+    //console.log("seif");
+      /* $('#categories').on('change',function(e){
+        console.log("seif");
+    });
+         console.log("seif");*/
+
+         $(document).ready(function(){
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+            $('.categories').change(function(){
+                
+                
+                    var select=$('.categories').val();
+                          var token = $("input[name='_token']").val();
+                    console.log(select); 
+
+                   
+$.ajax({
+    url:"creat",
+    method:"POST",
+    //dataType:"json",
+    data:{select:select, _token:token},
+    cache: false,
+    success:function(){
+        alert(select);
+
+    
+}
+                   });
+
+            });
+
+
+         });
+
+
+=======
+>>>>>>> 65091ba3de74bb6e4ae26b07dce07cdc7ac1a19a
 var slideIndex = 1;
 showDivs(slideIndex);
 
