@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
 use App\Categories;
 use App\Annonce;
-
+use App\Catalog;
 use App\Subcategory;
 use DB;
+use Image;
 use Illuminate\Support\Facades\Input;
 
 class CreatController extends Controller
@@ -32,6 +33,21 @@ class CreatController extends Controller
         return view('creat',compact('req','data','select'));
 
     }
+
+
+    /**
+     * Get Ajax Request and restun Data
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myformAjax($id)
+    {
+        $subcat = DB::table("subcategory")
+                    ->where("categories_Id",$id)
+                    ->lists("id","type");
+        return json_encode($subcat);
+    }
+
     function fetch (Request $request){
         $select=$request->all();
        $data =DB::table('subcategory')
@@ -58,20 +74,22 @@ class CreatController extends Controller
      */
     public function store(Request $request)
     {
-      /*  $annonce= new Annonce();
+       $annonce= new Annonce();
+       
         $annonce->title= $request['type'];
         $annonce->description= $request['description'];
         $annonce->price= $request['price'];
-        $annonce->type= 'for sale'
+        $annonce->type= $request['type'];
         $annonce->adresse= $request['location'];
         $annonce->user_id= Auth::user()->id;
 
 
         $annonce->categories_id= $request['categories'];
-        $annonce->subcategory_id= $request['subcategory'];*/
-       // $annonce->created_at= $request['description'];
-        //$annonce->updated_at= $request['description'];
+        $annonce->subcategory_id= $request['subcategory'];
+       
+    $annonce->save();
 
+<<<<<<< HEAD
         $annonce= new Annonce();
         $annonce->title= 'new carrr';
         $annonce->description= 'fiat 500';
@@ -79,13 +97,30 @@ class CreatController extends Controller
         $annonce->type= 'for sale';
         $annonce->adresse= 'Tunis';
         $annonce->user_id= Auth::user()->id;
+=======
+   // $id = DB::table('annonces')->orderBy('id', 'DESC')->first();
+
+// $avatar=$request->file('imgAn');
+     
+        $catalog =new Catalog();
+            $avatar=$request->file('imgAn');
+>>>>>>> 2798834ad20786beebbb386344f9edcdc4600130
+
+            $filename=time(). '.' . $avatar->getClientOriginalExtension();
 
 
-        $annonce->categories_id= 1;
-                $annonce->subcategory_id= 1;
-    // add other fields
-    $annonce->save();
-                return redirect('welcome');
+            Image::make($avatar)->resize(300,300)->save(public_path('/annonceImg/' .$filename));
+
+            $catalog->annonce_id = $annonce->id;
+            $catalog->urlimg='annonceImg/'.$filename;
+            $catalog->save();
+
+
+        
+        
+
+
+                return redirect('/');
 
  }
 

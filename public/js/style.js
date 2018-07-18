@@ -54,7 +54,7 @@ $(document).ready(function() {
     }, 3000);
 
 });
-<<<<<<< HEAD
+
 
 
   
@@ -64,7 +64,7 @@ $(document).ready(function() {
     });
          console.log("seif");*/
 
-         $(document).ready(function(){
+        /* $(document).ready(function(){
 $.ajaxSetup({
   headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -95,10 +95,36 @@ $.ajax({
 
 
          });
+*/
+$(document).ready(function() {
+    $.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+          $('.categories').change(function(){
+            var cat = $(this).val();
+            console.log(cat);
+            if(cat) {
+                $.ajax({
+                    url: 'myform/ajax/'+cat,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {
+
+                        alert("yes");
+                        $('select[name="subcategory"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="subcategory"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
 
 
-=======
->>>>>>> 65091ba3de74bb6e4ae26b07dce07cdc7ac1a19a
+                    }
+                });
+            }else{
+                $('select[name="subcategory"]').empty();
+            }
+        });
+    });
+
 var slideIndex = 1;
 showDivs(slideIndex);
 

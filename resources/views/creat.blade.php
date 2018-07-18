@@ -25,7 +25,8 @@
         <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-        <form role="form" method="post" style="margin-top: 50px;"action="CreatAn/store">
+        <form role="form" method="post" style="margin-top: 50px;"action="CreatAn/store" enctype="multipart/form-data">
+            {{csrf_field()}}
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
                     <h3 class="panel-title">add an ad</h3>
@@ -33,7 +34,7 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Photos</label>
-                        <input type="file" class="form-control" multiple />
+                        <input type="file" class="form-control" multiple name="imgAn" />
                     </div>
                     <div class="form-group">
                     </div>
@@ -63,10 +64,10 @@
                         <select class="form-control categories" id="categories" name="categories">
                           
                             @foreach($req as $cat )
-                            <option name="{{$cat->id}}">{{$cat->type}}</option>
+                            <option value="{{$cat->id}}">{{$cat->type}}</option>
                                 @endforeach
                         </select>
-                        {{var_dump($select)}}
+                        <!--{{var_dump($select)}}-->
                         <select class="form-control subcategory" name="subcategory">
                              @foreach($data as $row )
                             <option value="{{$row->id}}">{{$row->type}}</option>
@@ -83,6 +84,16 @@
                     <h3 class="panel-title">add an ad</h3>
                 </div>
                 <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label" for="type">Type</label>
+
+                        <select class="form-control" name="type" id="type" autofocus>
+                            <option value="For sale">For sale</option>
+                            <option value="For rent">For rent</option>
+                            <option value="looking">looking</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label class="control-label">Price</label>
                         <input  type="number" required="required" class="form-control" name="price" placeholder="0.00" value="0.00" />
