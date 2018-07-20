@@ -43,9 +43,17 @@ class CreatController extends Controller
     public function myformAjax($id)
     {
         $subcat = DB::table("subcategory")
-                    ->where("categories_Id",$id)
-                    ->lists("id","type");
-        return json_encode($subcat);
+         ->select("id","type")
+                    ->where("categories_Id",'=',$id)
+                    ->get();
+                   /* $s="";
+                    foreach ($subcat as $c ) {
+
+                        $s.='<option value="'. $c->id.'">'.$c->type.'</option>';
+
+                    }*/
+          //return $s;         
+        return   \Response::json($subcat);
     }
 
     function fetch (Request $request){
