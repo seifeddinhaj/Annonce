@@ -98,17 +98,11 @@ class CreatController extends Controller
     $annonce->save();
 
 
-       /* $annonce= new Annonce();
-        $annonce->title= 'new carrr';
-        $annonce->description= 'fiat 500';
-        $annonce->price= 548712;
-        $annonce->type= 'for sale';
-        $annonce->adresse= 'Tunis';
-        $annonce->user_id= Auth::user()->id;*/
 
-   // $id = DB::table('annonces')->orderBy('id', 'DESC')->first();
 
-// $avatar=$request->file('imgAn');
+   
+        
+
      
         $catalog =new Catalog();
             $avatar=$request->file('imgAn');

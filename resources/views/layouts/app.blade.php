@@ -49,7 +49,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <input type="text" name="search " placeholder="Search all categories.." class="search">
+                        <form method="post" action="/search">
+                            @csrf
+                        <input type="text" name="search" placeholder="Search all categories.. " class="search">
+                        </form>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -75,6 +78,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{URL('creat')}}">Creat ad</a>
+                                    <a class="dropdown-item" href="{{('myads')}}">My ads </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

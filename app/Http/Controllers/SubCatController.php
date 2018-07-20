@@ -20,22 +20,21 @@ class SubCatController extends BaseController
 
        $column="categories_id";
         $req=Subcategory::where($column , '=', $id)->get();
-        // $column="id";
-        //$req1=Categories::where($column,'=',$id);
+
         $req1=Categories::select('*')->where('id', $id)->get();
         $q=DB::table('annonces')
         ->select('*' )
         ->where('categories_id','=',$id)
-        //->distinct('catalog.annonce_id')
+
         ->get();
         $qq=DB::table('annonces')
         ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
         ->select('annonces.*','catalog.urlimg','catalog.annonce_id' )
         ->where('categories_id','=',$id)
         ->groupBy('catalog.annonce_id')
-        //->distinct('catalog.annonce_id')
+
         ->get();
-        //seif
+
         
 
         return view('subcat',compact('req','req1','qq'));
