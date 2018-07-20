@@ -27,6 +27,7 @@
         <div class="col-md-4">
         <form role="form" method="post" style="margin-top: 50px;"action="CreatAn/store" enctype="multipart/form-data">
             {{csrf_field()}}
+            <input type="hidden" name="_token" value="{{ Session::token() }}">
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
                     <h3 class="panel-title">add an ad</h3>
@@ -34,6 +35,8 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Photos</label>
+                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+
                         <input type="file" class="form-control" multiple name="imgAn" />
                     </div>
                     <div class="form-group">
@@ -50,15 +53,21 @@
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
+                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+
                         <label class="control-label" for="title">Title</label>
                         <textarea class="form-control" name="title" rows="2" id="title" minlength="3" required></textarea>
                     </div>
                     <div class="form-group">
+                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+
                         <label class="control-label" for="Description">Description</label>
                         <textarea class="form-control" rows="2" name="description" id="Description" minlength="3" required></textarea>
                     </div>
                      
-                    <div class="form-group">
+                    <div id="cat" class="form-group">
+                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+
                         <label class="control-label" for="Description"> Catégorie</label>
                         
                         <select class="form-control categories" id="categories" name="categories">
@@ -69,9 +78,9 @@
                         </select>
                         <!--{{var_dump($select)}}-->
                         <select class="form-control subcategory" name="subcategory">
-                             @foreach($data as $row )
+                            <!-- @foreach($data as $row )
                             <option value="{{$row->id}}">{{$row->type}}</option>
-                                @endforeach
+                                @endforeach-->
                         </select>
 
                     </div>

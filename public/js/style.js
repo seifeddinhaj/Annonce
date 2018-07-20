@@ -96,32 +96,51 @@ $.ajax({
 
          });
 */
+$.ajaxSetup({
+
+  headers: {
+
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+  }
+
+});
 $(document).ready(function() {
     $.ajaxSetup({
   headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+
+
+});
           $('.categories').change(function(){
             var cat = $(this).val();
             console.log(cat);
-            if(cat) {
+            //if(cat) {
                 $.ajax({
                     url: 'myform/ajax/'+cat,
                     type: "GET",
                     dataType: "json",
+                    /*beforeSend: function(xhr){
+                        xhr.setRequestHeader('X-CSRF-TOKEN', $("#token").attr('content')
+                            );},*/
                     success:function(data) {
-
-                        alert("yes");
+console.log(data);
+                        //alert("yes");
                         $('select[name="subcategory"]').empty();
-                        $.each(data, function(key, value) {
-                            $('select[name="subcategory"]').append('<option value="'+ key +'">'+ value +'</option>');
-                        });
+                        $.each(data, function(key, type) {
+                $('select[name="subcategory"]').append('<option value="'+ data[key].id+'">'+ data[key].type +'</option>');
+                        //$('select[name="subcategory"]').html(data);
+                    
+
+                        //$('#cat').reload();
+                    });}
 
 
-                    }
+                    
                 });
-            }else{
-                $('select[name="subcategory"]').empty();
-            }
+           // }else{
+           //     $('select[name="subcategory"]').empty();
+            //}
         });
     });
 
