@@ -76,7 +76,7 @@ class CreatController extends Controller
     {
        $annonce= new Annonce();
        
-        $annonce->title= $request['type'];
+        $annonce->title= $request['title'];
         $annonce->description= $request['description'];
         $annonce->price= $request['price'];
         $annonce->type= $request['type'];
@@ -89,7 +89,7 @@ class CreatController extends Controller
        
     $annonce->save();
 
-<<<<<<< HEAD
+
         $annonce= new Annonce();
         $annonce->title= 'new carrr';
         $annonce->description= 'fiat 500';
@@ -97,14 +97,10 @@ class CreatController extends Controller
         $annonce->type= 'for sale';
         $annonce->adresse= 'Tunis';
         $annonce->user_id= Auth::user()->id;
-=======
-   // $id = DB::table('annonces')->orderBy('id', 'DESC')->first();
 
-// $avatar=$request->file('imgAn');
      
         $catalog =new Catalog();
             $avatar=$request->file('imgAn');
->>>>>>> 2798834ad20786beebbb386344f9edcdc4600130
 
             $filename=time(). '.' . $avatar->getClientOriginalExtension();
 

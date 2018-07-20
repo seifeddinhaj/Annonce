@@ -34,7 +34,7 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Photos</label>
-                        <input type="file" class="form-control" multiple name="imgAn" />
+                        <input type="file" class="form-control" multiple  name="files[]"/>
                     </div>
                     <div class="form-group">
                     </div>
