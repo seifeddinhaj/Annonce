@@ -20,15 +20,15 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
-<<<<<<< HEAD
+
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
-=======
+
 //Route::get('creat',array('as'=>'creat','uses'=>'CreatController@myform'));
 Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 
 
 Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> 570b72481e372d3a6fe0377d49c583bdda83e290
+
 Route::get('/subcat/{catId}', 'SubCatController@index')->name('subcat');
 ROute::get('/creat','CreatController@indexx')->name('creat');
 Route::post('creat', ['as'=>'creat','uses'=>'CreatController@indexx']);

@@ -35,13 +35,13 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label class="control-label">Photos</label>
-<<<<<<< HEAD
-                        <input type="file" class="form-control" multiple  name="files[]"/>
-=======
+
+                        <input type="file" class="form-control" multiple  name="imgAn[]"/>
+
                                     <input type="hidden" name="_token" value="{{ Session::token() }}">
 
-                        <input type="file" class="form-control" multiple name="imgAn" />
->>>>>>> 570b72481e372d3a6fe0377d49c583bdda83e290
+                       <!-- <input type="file" class="form-control" multiple name="imgAn" />-->
+
                     </div>
                     <div class="form-group">
                     </div>
@@ -72,14 +72,16 @@
                     <div id="cat" class="form-group">
                                     <input type="hidden" name="_token" value="{{ Session::token() }}">
 
-                        <label class="control-label" for="Description"> Catégorie</label>
+                        <label class="control-label" for="Description"> Category</label>
                         
                         <select class="form-control categories" id="categories" name="categories">
-                          
+                          <option>choose a category</option>
                             @foreach($req as $cat )
                             <option value="{{$cat->id}}">{{$cat->type}}</option>
                                 @endforeach
                         </select>
+
+                        <label class="control-label" for="Description">Sub  Category</label>
                         <!--{{var_dump($select)}}-->
                         <select class="form-control subcategory" name="subcategory">
                             <!-- @foreach($data as $row )

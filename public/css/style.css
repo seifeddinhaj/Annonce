@@ -721,7 +721,7 @@ p,h1,h2,a:hover{
 
 .panel-image ~ input[type=checkbox] {
     position:absolute;
-    top:- 30px;
+    top:-30px;
     z-index: -1;
 }
 

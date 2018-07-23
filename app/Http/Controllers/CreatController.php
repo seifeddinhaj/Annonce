@@ -83,7 +83,7 @@ class CreatController extends Controller
     public function store(Request $request)
     {
        $annonce= new Annonce();
-       
+
         $annonce->title= $request['title'];
         $annonce->description= $request['description'];
         $annonce->price= $request['price'];
@@ -94,39 +94,31 @@ class CreatController extends Controller
 
         $annonce->categories_id= $request['categories'];
         $annonce->subcategory_id= $request['subcategory'];
-       
+
     $annonce->save();
 
 
-        $annonce= new Annonce();
-        $annonce->title= 'new carrr';
-        $annonce->description= 'fiat 500';
-        $annonce->price= 548712;
-        $annonce->type= 'for sale';
-        $annonce->adresse= 'Tunis';
-        $annonce->user_id= Auth::user()->id;
-
-     
-        $catalog =new Catalog();
-            $avatar=$request->file('imgAn');
-
-            $filename=time(). '.' . $avatar->getClientOriginalExtension();
 
 
-            Image::make($avatar)->resize(300,300)->save(public_path('/annonceImg/' .$filename));
 
-            $catalog->annonce_id = $annonce->id;
-            $catalog->urlimg='annonceImg/'.$filename;
-            $catalog->save();
+            foreach ($request->file('imgAn') as $imgAn){
+                $catalog =new Catalog();
 
 
-        
-        
 
 
-                return redirect('/');
+           $filename=time(). '.' . $imgAn->getClientOriginalExtension();
 
- }
+
+           Image::make($imgAn)->resize(300,300)->save(public_path('/annonceImg/' .$filename));
+
+           $catalog->annonce_id = $annonce->id;
+           $catalog->urlimg='annonceImg/'.$filename;
+           $catalog->save();
+
+            }
+
+    }
 
     /**
      * Display the specified resource.

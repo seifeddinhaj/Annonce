@@ -77,7 +77,7 @@
                                 <input type="hidden" value="{{($annonce->id)}}" name="id">
                             <div class="form-group">
                                 <label class="control-label">Photos</label>
-                                <input type="file" class="form-control" multiple name="imgAn" />
+                                <input type="file" class="form-control" multiple="true" name="imgAn[]" />
                             </div>
 
                             <div class="form-group">
