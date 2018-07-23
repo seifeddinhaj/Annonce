@@ -21,14 +21,14 @@ if(isset(Auth::user()->name)){
         if(Auth::user()->name=='admin'){
             return redirect('administrateur');
         }
-<<<<<<< HEAD
+
         else {
 
 
 
-=======
+
 }
->>>>>>> f377271db4d51ee93b35da6468aa54b812ee9171
+
         $req1=Annonce::all();
         $req2=DB::table('annonces')
         ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
