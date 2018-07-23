@@ -17,10 +17,11 @@ class Controller extends BaseController
     public function index()
 
     {
+if(isset(Auth::user()->name)){
         if(Auth::user()->name=='admin'){
             return redirect('administrateur');
         }
-
+}
         $req1=Annonce::all();
         $req2=DB::table('annonces')
         ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
