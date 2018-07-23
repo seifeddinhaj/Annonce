@@ -20,6 +20,9 @@ class Controller extends BaseController
         if(Auth::user()->name=='admin'){
             return redirect('administrateur');
         }
+        else {
+
+
 
         $req1=Annonce::all();
         $req2=DB::table('annonces')
@@ -32,6 +35,7 @@ class Controller extends BaseController
 
         $req=Categories::all();
         return view('welcome',compact('req','req1','req2'));
+    }
     }
     
    
