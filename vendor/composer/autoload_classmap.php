@@ -23,6 +23,8 @@ return array(
     'App\\Http\\Controllers\\DetailsController' => $baseDir . '/app/Http/Controllers/DetailsController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\SubCatController' => $baseDir . '/app/Http/Controllers/SubCatController.php',
+    'App\\Http\\Controllers\\myadsController' => $baseDir . '/app/Http/Controllers/myadsController.php',
+    'App\\Http\\Controllers\\searchController' => $baseDir . '/app/Http/Controllers/searchController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
