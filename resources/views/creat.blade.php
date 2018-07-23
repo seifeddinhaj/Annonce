@@ -36,11 +36,19 @@
                     <div class="form-group">
                         <label class="control-label">Photos</label>
 
+<<<<<<< HEAD
                         <input type="file" class="form-control" multiple  name="imgAn[]"/>
 
                                     <input type="hidden" name="_token" value="{{ Session::token() }}">
 
                        <!-- <input type="file" class="form-control" multiple name="imgAn" />-->
+=======
+                        <input type="file" class="form-control" multiple  name="files[]"/>
+
+                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+
+                        <input type="file" class="form-control" multiple name="imgAn" />
+>>>>>>> 35eb28cf3f538a28926c288f74c3e17333d12af8
 
                     </div>
                     <div class="form-group">

@@ -38,3 +38,4 @@ Route::post('/search','searchController@show')->name('search');
 ROute::get('/myads','myadsController@index')->name('myads');
 Route::get('/myads/remove/{id}','myadsController@destroy')->name('myads');
 ROute::post('myads/edit','myadsController@update')->name('myads');
+Route::get('administrateur','AdminController@index');

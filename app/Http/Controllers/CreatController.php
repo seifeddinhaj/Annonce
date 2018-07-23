@@ -98,8 +98,20 @@ class CreatController extends Controller
     $annonce->save();
 
 
+<<<<<<< HEAD
+=======
 
 
+   
+        
+>>>>>>> 35eb28cf3f538a28926c288f74c3e17333d12af8
+
+
+<<<<<<< HEAD
+=======
+
+            $filename=time(). '.' . $avatar->getClientOriginalExtension();
+>>>>>>> 35eb28cf3f538a28926c288f74c3e17333d12af8
 
             foreach ($request->file('imgAn') as $imgAn){
                 $catalog =new Catalog();
