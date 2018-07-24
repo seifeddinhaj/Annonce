@@ -21,7 +21,7 @@
             <input type="submit" class="btn-dang" value="Delete">
             </form>
             <br>
-            <form action="" method="post">
+            <form action="CreatCat" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="add">Add new categories</label>

@@ -26,7 +26,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,8 +36,14 @@ class CategoriesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+     
+    {$c=new Categories();
+        $c->type= $request['add'];
+        $c->save();
+          return redirect ("categories");
+
+        //$values = array('name' => $request['add']);
+//DB::table('users')->insert($values);
     }
 
     /**
