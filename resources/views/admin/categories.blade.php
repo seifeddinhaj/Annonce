@@ -6,7 +6,7 @@
     <div class="container">
         <div class="col-md-4"></div>
         <div class="col-md-4 col-xs-12" style="text-align:  center;">
-            <form action="" method="post">
+            <form action="deleteCat" method="post">
                 @csrf
             <div class="form-group">
                 <label for="categories">Select one categories for delete</label>
@@ -21,7 +21,7 @@
             <input type="submit" class="btn-dang" value="Delete">
             </form>
             <br>
-            <form action="" method="post">
+            <form action="CreatCat" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="add">Add new categories</label>

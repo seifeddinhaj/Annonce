@@ -21,6 +21,9 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
 
+Route::post('deleteCat','CategoriesController@destroy');
+Route::post('CreatCat','CategoriesController@store');
+
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 
 Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
