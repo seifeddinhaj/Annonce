@@ -32,10 +32,10 @@
             <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
         </ul>
         <ul class="sidebar-nav" id="sidebar">
-            <li><a href="#">All ads<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+            <li><a href="{{URL('administrateur')}}">All ads<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 
                 <li><a href="{{URL('categories')}}">Categori<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                <li><a href="#">SubCate<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="{{URL('subcategories')}}">SubCate<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a href="#">Users<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 
 

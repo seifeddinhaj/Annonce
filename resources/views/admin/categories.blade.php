@@ -25,7 +25,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="add">Add new categories</label>
-                    <input type="text" id="add" name="add" placeholder="Exp : vehicles" class="form-control">
+                    <input type="text" id="add" name="add" placeholder="Exp : vehicles" required class="form-control">
 
                 </div>
                 <input type="submit" class="btn-suc" value="Add">
