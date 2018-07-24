@@ -48,7 +48,7 @@
         <div class="page-content inset">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="well lead">SO ADS</p>
+                    <p class="well lead">@yield('sub')</p>
 
 
 

@@ -1,4 +1,7 @@
 @extends('layouts.adminapp')
+@section('sub')
+    Categories
+    @endsection
 @section('content')
     <div class="container">
         <div class="col-md-4"></div>
@@ -15,7 +18,17 @@
                 </select>
             </div>
 
-            <input type="submit" class="btn-dang" value="Danger">
+            <input type="submit" class="btn-dang" value="Delete">
+            </form>
+            <br>
+            <form action="" method="post">
+                @csrf
+                <div class="form-group">
+                    <label for="add">Add new categories</label>
+                    <input type="text" id="add" name="add" placeholder="Exp : vehicles" class="form-control">
+
+                </div>
+                <input type="submit" class="btn-suc" value="Add">
             </form>
          </div>
     </div>
