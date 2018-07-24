@@ -23,7 +23,6 @@ Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
 
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 
-//Route::get('creat',array('as'=>'creat','uses'=>'CreatController@myform'));
 Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 
 

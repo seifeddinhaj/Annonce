@@ -16,11 +16,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-     /*$q=DB::table('annonces')
-        ->select('*' )
-        //->where('categories','=',$id)
-        //->distinct('catalog.annonce_id')
-        ->get();*/
+
         $q=DB::table('annonces')
         ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
         ->select('annonces.*','catalog.urlimg','catalog.annonce_id' )
