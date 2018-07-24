@@ -24,7 +24,7 @@ class AdminController extends Controller
 
         ->get();
 
-        return view('administrateur',compact('q'));   
+        return view('admin/administrateur',compact('q'));   
     }
 
     /**
