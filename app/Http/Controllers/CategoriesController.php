@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use App\Subcategory;
 use Illuminate\Http\Request;
-
+use DB;
 class CategoriesController extends Controller
 {
     /**
@@ -79,8 +80,19 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id=$request['categories'];
+        /*$id=DB::table('categories')->where('type','=',$type)
+        ->select("id")
+        ->get();*/
+
+
+DB::table('subcategory')->where('categories_id','=',$id)
+->delete();
+DB::table('categories')
+->where('id','=',$id)
+->delete();
+        return redirect ("categories");
     }
 }
