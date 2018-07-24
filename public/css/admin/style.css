@@ -150,3 +150,13 @@
     padding-right: 50px;
     text-align: center;
 }
+.btn-suc , btn-suc:hover{
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #27a229;
+    color: #1b821d;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
