@@ -139,3 +139,14 @@
         transition: all .4s ease 0s;
     }
 }
+
+.btn-dang ,btn-dang:hover{
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #e67070;
+    color: #ff5555;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}

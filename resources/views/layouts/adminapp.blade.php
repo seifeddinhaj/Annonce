@@ -10,14 +10,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="{{asset('css/admin/style.css')}}" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <style>
 
-    </style>
+
 </head>
 <body>
 
@@ -32,7 +34,7 @@
         <ul class="sidebar-nav" id="sidebar">
             <li><a href="#">All ads<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 
-                <li><a href="#">Categori<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="{{URL('categories')}}">Categori<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a href="#">SubCate<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a href="#">Users<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 
