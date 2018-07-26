@@ -25,6 +25,7 @@ Route::post('deleteCat','CategoriesController@destroy');
 Route::post('CreatCat','CategoriesController@store');
 Route::post('deleteSubCat','subCategoriesController@destroy');
 Route::post('CreateSubCat','subCategoriesController@store');
+Route::post('DetailsAn','AdminController@show');
 
 
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
