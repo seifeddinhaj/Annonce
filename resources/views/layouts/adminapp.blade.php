@@ -36,7 +36,7 @@
 
                 <li><a href="{{URL('categories')}}">Categori<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a href="{{URL('subcategories')}}">SubCate<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                <li><a href="#">Users<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="{{URL('users')}}">Users<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 
 
         </ul>

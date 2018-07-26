@@ -1,6 +1,6 @@
 @extends('layouts.adminapp')
 @section('sub')
-    All categories
+    All users
 @endsection
 @section('content')
     <div class="container">
@@ -43,4 +43,4 @@
             </table>
         </div>
     </div>
-    @endsection
+@endsection
