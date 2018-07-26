@@ -20,17 +20,11 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
-
 Route::post('deleteCat','CategoriesController@destroy');
 Route::post('CreatCat','CategoriesController@store');
-
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
-
 Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
-
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/subcat/{catId}', 'SubCatController@index')->name('subcat');
 ROute::get('/creat','CreatController@indexx')->name('creat');
 Route::post('creat', ['as'=>'creat','uses'=>'CreatController@indexx']);
@@ -42,5 +36,5 @@ Route::get('/myads/remove/{id}','myadsController@destroy')->name('myads');
 ROute::post('myads/edit','myadsController@update')->name('myads');
 Route::get('administrateur','AdminController@index');
 Route::get('categories','CategoriesController@index');
-Route::get('users','userController@index');
+Route::get('user','userController@index');
 ROute::get('subcategories','subCategoriesController@index');
