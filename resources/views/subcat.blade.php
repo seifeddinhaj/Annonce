@@ -38,7 +38,7 @@
                     <div class="col-md-3 text-center">
                         <a href="{{URL('/details/'.$annonce->id)}}">
                         <div class="img">
-                        <img src="{{asset($annonce->urlimg)}}" alt="img Ad" class="img-thumbnail">
+                        <img src="{{asset($annonce->urlimg)}}" alt="img Ad" class="img-thumbnail" style=" height: 150px; width: 200px;">
                         </div>
                         <div class="price">
                         <p>{{$annonce->price}} DT </p>
