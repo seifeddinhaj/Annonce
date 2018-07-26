@@ -7,6 +7,7 @@ use App\Categories;
 use App\Annonce;
 use App\Catalog;
 use DB;
+use Auth;
 class DetailsController extends Controller
 {
     /**
@@ -20,6 +21,8 @@ class DetailsController extends Controller
     }
     public function details($id)
     { 
+if (Auth::check()) {
+    // The user is logged in.
 
 
        // $user = DB::table('annonces')->where('id', $id)->get();
@@ -35,6 +38,9 @@ class DetailsController extends Controller
         //->distinct('catalog.annonce_id')
         ->get();
         return view('details',compact('req1','detail','user'));
+    }
+        else
+        return redirect('/login');
     }
     /**
      * Show the form for creating a new resource.

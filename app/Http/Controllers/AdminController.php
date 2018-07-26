@@ -6,7 +6,7 @@ use App\Annonce;
 use App\Catalog;
 use DB;
 use Illuminate\Http\Request;
-
+use Auth;
 class AdminController extends Controller
 {
     /**
@@ -15,7 +15,9 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {if (Auth::check()) {
+    // The user is logged in...
+
 
         $q=DB::table('annonces')
         ->join('users', 'annonces.user_id', '=', 'users.id')
@@ -28,6 +30,11 @@ class AdminController extends Controller
         ->get();
 
         return view('admin/administrateur',compact('q'));   
+}else 
+return redirect('/login');
+
+
+
     }
     
 
