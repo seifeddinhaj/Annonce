@@ -26,6 +26,7 @@ class AdminController extends Controller
 
         return view('admin/administrateur',compact('q'));   
     }
+    
 
     /**
      * Show the form for creating a new resource.

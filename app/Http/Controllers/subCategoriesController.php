@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Categories;
+use App\Subcategory;
 use Illuminate\Http\Request;
+use DB;
 
 class subCategoriesController extends Controller
 {
@@ -14,7 +16,8 @@ class subCategoriesController extends Controller
     public function index()
     {
         $cat =Categories::all();
-        return view('admin/subcategories',compact('cat'));
+        $sub=Subcategory::all();
+        return view('admin/subcategories',compact('cat','sub'));
     }
 
     /**
@@ -35,7 +38,11 @@ class subCategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $c=new SubCategory();
+        $c->type= $request['add'];
+        $c->categories_id=$request['categories'];
+        $c->save();
+          return redirect ("subcategories");
     }
 
     /**
@@ -78,8 +85,11 @@ class subCategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        DB::table('subcategory')->where('type','=',$request['subcategories'])
+->delete();
+
+        return redirect ("subcategories");
     }
 }

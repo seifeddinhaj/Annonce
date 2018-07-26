@@ -23,6 +23,9 @@ Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
 
 Route::post('deleteCat','CategoriesController@destroy');
 Route::post('CreatCat','CategoriesController@store');
+Route::post('deleteSubCat','subCategoriesController@destroy');
+Route::post('CreateSubCat','subCategoriesController@store');
+
 
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 
@@ -44,3 +47,6 @@ Route::get('administrateur','AdminController@index');
 Route::get('categories','CategoriesController@index');
 
 ROute::get('subcategories','subCategoriesController@index');
+
+
+
