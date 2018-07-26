@@ -99,8 +99,10 @@ return redirect('/login');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        DB::table('catalog')->where('annonce_id', '=',  $request['id'])->delete();
+        DB::table('annonces')->where('id', '=', $request['id'])->delete();
+        return redirect('administrateur');
     }
 }

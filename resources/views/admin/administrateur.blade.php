@@ -24,7 +24,8 @@
                 <tbody>
                     @foreach($q as $d)
                 <tr>
-                    <th scope="row">1</th>
+
+                    <th scope="row">{{$d->id}}</th>
                     <td>{{$d->title}}</td>
                     <td>{{$d->price}}</td>
                     <td>{{$d->description}}</td>
@@ -34,6 +35,13 @@
                         <td>{{$d->cat}}</td>
                          <td>{{$d->sub}}</td>
                           <td>{{$d->created_at}}</td>
+                    <form action="add/delete" method="post">
+
+                        @csrf
+                        <td>
+                        <input type="hidden" value="{{$d->id}}" name="id">
+                   <input type="submit" class="btn-dang" value="Delete"></td>
+                    </form>
                 </tr>
                 @endforeach
                 

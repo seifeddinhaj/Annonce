@@ -36,7 +36,7 @@
 
                 <li><a href="{{URL('categories')}}">Categori<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a href="{{URL('subcategories')}}">SubCate<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                <li><a href="{{URL('users')}}">Users<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="{{URL('user')}}">Users<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
 
 
         </ul>
@@ -48,7 +48,45 @@
         <div class="page-content inset">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="well lead">@yield('sub')</p>
+
+                        <div class="container">
+                            <div class="well lead">
+                                    @guest
+
+
+                                            <a class="float-right" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+
+
+                                            <a  class="float-right" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+                                    @else
+
+
+                                                {{ Auth::user()->name }} <span class="caret"></span>
+
+
+
+
+                                                <a  href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+
+
+                                    @endguest
+
+
+                        </div>
+
+                    @yield('sub')</div>
 
 
 
