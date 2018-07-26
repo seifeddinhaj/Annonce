@@ -22,23 +22,21 @@
                 </tr>
                 </thead>
                 <tbody>
+                    @foreach($q as $d)
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>{{$d->title}}</td>
+                    <td>{{$d->price}}</td>
+                    <td>{{$d->description}}</td>
+                     <td>{{$d->type}}</td>
+                      <td>{{$d->adresse}}</td>
+                       <td>{{$d->name}}</td>
+                        <td>{{$d->cat}}</td>
+                         <td>{{$d->sub}}</td>
+                          <td>{{$d->created_at}}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                @endforeach
+                
                 </tbody>
             </table>
         </div>

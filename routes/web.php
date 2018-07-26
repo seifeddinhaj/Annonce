@@ -22,6 +22,14 @@ Auth::routes();
 Route::post('CreatAn/store','CreatController@store')->name('CreatAn/store');
 Route::post('deleteCat','CategoriesController@destroy');
 Route::post('CreatCat','CategoriesController@store');
+<<<<<<< HEAD
+=======
+Route::post('deleteSubCat','subCategoriesController@destroy');
+Route::post('CreateSubCat','subCategoriesController@store');
+Route::post('DetailsAn','AdminController@show');
+
+
+>>>>>>> eb0a7298258985a92d27da55a0978a28ffea36b3
 Route::get('creat/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'CreatController@myformAjax'));
 Route::get('/home', 'HomeController@index')->name('home');
@@ -36,5 +44,18 @@ Route::get('/myads/remove/{id}','myadsController@destroy')->name('myads');
 ROute::post('myads/edit','myadsController@update')->name('myads');
 Route::get('administrateur','AdminController@index');
 Route::get('categories','CategoriesController@index');
+<<<<<<< HEAD
 Route::get('user','userController@index');
 ROute::get('subcategories','subCategoriesController@index');
+=======
+
+
+ROute::get('subcategories','subCategoriesController@index');
+
+
+
+
+Route::get('users','userController@index');
+ROute::get('subcategories','subCategoriesController@index');
+
+>>>>>>> eb0a7298258985a92d27da55a0978a28ffea36b3

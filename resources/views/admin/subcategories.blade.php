@@ -6,25 +6,30 @@
    <div class="container">
       <div class="col-md-4"></div>
       <div class="col-md-4 col-xs-12" style="text-align:  center;">
-         <form action="" method="post">
+         <form action="deleteSubCat" method="post">
             @csrf
             <div class="form-group">
+               
                <label for="subcategories">Select one Sub categories for delete</label>
                <select class="form-control" id="subcategories" name="subcategories">
                   <option value="null"></option>
-                  <optgroup label="h1">
-                     <option>gguha</option>
+                @foreach($cat as $c)
+                  <optgroup label="{{$c->type}}">
+                     @foreach($sub as $s)
+                     @if($c->id == $s->categories_id)
+                     <option >{{$s->type}}</option>
+                     @endif
+                  @endforeach
                   </optgroup>
-                  <optgroup label="fa">
-                     <option>fa</option>
-                  </optgroup>
+                  @endforeach
+                 
                </select>
             </div>
             <input type="submit" class="btn-dang" value="Delete">
          </form>
 
             <br>
-         <form action="" method="post">
+         <form action="CreateSubCat" method="post">
             @csrf
             <div class="form-group">
                <label>Add new sub categories</label>

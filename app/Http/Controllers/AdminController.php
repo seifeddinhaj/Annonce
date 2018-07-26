@@ -18,14 +18,18 @@ class AdminController extends Controller
     {
 
         $q=DB::table('annonces')
-        ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
-        ->select('annonces.*','catalog.urlimg','catalog.annonce_id' )
-        ->groupBy('catalog.annonce_id')
-
+        ->join('users', 'annonces.user_id', '=', 'users.id')
+        ->join('categories','annonces.categories_id','=','categories.id')
+        ->join('subcategory','annonces.subcategory_id','=','subcategory.id')
+        ->select('users.name','annonces.*','categories.type as cat','subcategory.type as sub' )
+        
+        
+        //->distinct('catalog.annonce_id')
         ->get();
 
         return view('admin/administrateur',compact('q'));   
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -56,7 +60,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
