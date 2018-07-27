@@ -22,9 +22,9 @@ class SubCatController extends BaseController
         $req=Subcategory::where($column , '=', $id)->get();
 
         $req1=Categories::select('*')->where('id', $id)->get();
-        $q=DB::table('annonces')
+       /* $q=DB::table('annonces')
         ->select('*' )
-        ->where('categories_id','=',$id)
+        ->where('categories_id','=',$id)*/
 
         ->get();
         $qq=DB::table('annonces')

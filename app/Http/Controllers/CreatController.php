@@ -21,6 +21,8 @@ class CreatController extends Controller
      */
     public function indexx(Request $request)
     {
+
+        if (Auth::check()) {
         $req=Categories::all();
         //$select=$type;
        $select=$request->all();
@@ -31,6 +33,8 @@ class CreatController extends Controller
         ->where('categories.type','=','vehicles')
         ->get();
         return view('creat',compact('req','data','select'));
+        }else 
+return redirect('/login');
 
     }
 
@@ -42,6 +46,7 @@ class CreatController extends Controller
      */
     public function myformAjax($id)
     {
+
         $subcat = DB::table("subcategory")
          ->select("id","type")
                     ->where("categories_Id",'=',$id)
@@ -56,13 +61,7 @@ class CreatController extends Controller
         return   \Response::json($subcat);
     }
 
-    function fetch (Request $request){
-        $select=$request->all();
-       $data =DB::table('subcategory')
-        ->where('categories_id','=',$select)
-        ->get();
-         return view('creat',compact('data','select'));
-    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -82,6 +81,7 @@ class CreatController extends Controller
      */
     public function store(Request $request)
     {
+        if (Auth::check()) {
        $annonce= new Annonce();
 
         $annonce->title= $request['title'];
@@ -116,8 +116,14 @@ class CreatController extends Controller
            $catalog->save();
 
             }
+<<<<<<< HEAD
            return redirect('/');
 
+=======
+            return redirect('/');
+        }else
+  return redirect('/login');
+>>>>>>> c1bbc78f60f2be3d2844e65d4a02ed43136dcec0
     }
 
     /**

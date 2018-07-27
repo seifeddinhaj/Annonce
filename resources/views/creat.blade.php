@@ -39,6 +39,10 @@
 
                         <input type="file" class="form-control" multiple  name="imgAn[]"/>
 
+<<<<<<< HEAD
+=======
+                                    
+>>>>>>> c1bbc78f60f2be3d2844e65d4a02ed43136dcec0
 
 
                     </div>
