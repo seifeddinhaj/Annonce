@@ -15,10 +15,11 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {if (Auth::check()) {
+    {
+
+        if (Auth::check()) {
     // The user is logged in...
-
-
+if(Auth::user()->name=='admin'){
         $q=DB::table('annonces')
         ->join('users', 'annonces.user_id', '=', 'users.id')
         ->join('categories','annonces.categories_id','=','categories.id')
@@ -29,7 +30,7 @@ class AdminController extends Controller
         //->distinct('catalog.annonce_id')
         ->get();
 
-        return view('admin/administrateur',compact('q'));   
+        return view('admin/administrateur',compact('q')); }  
 }else 
 return redirect('/login');
 

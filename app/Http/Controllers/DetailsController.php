@@ -21,7 +21,7 @@ class DetailsController extends Controller
     }
     public function details($id)
     { 
-if (Auth::check()) {
+
     // The user is logged in.
 
 
@@ -39,9 +39,8 @@ if (Auth::check()) {
         ->get();
         return view('details',compact('req1','detail','user'));
     }
-        else
-        return redirect('/login');
-    }
+        
+    
     /**
      * Show the form for creating a new resource.
      *

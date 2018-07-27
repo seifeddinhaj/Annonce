@@ -39,15 +39,7 @@
 
                         <input type="file" class="form-control" multiple  name="imgAn[]"/>
 
-                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
-
-                       <!-- <input type="file" class="form-control" multiple name="imgAn" />-->
-
-                        <input type="file" class="form-control" multiple  name="files[]"/>
-
-                                    <input type="hidden" name="_token" value="{{ Session::token() }}">
-
-                        <input type="file" class="form-control" multiple name="imgAn" />
+                                    
 
 
                     </div>
