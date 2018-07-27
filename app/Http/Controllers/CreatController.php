@@ -116,6 +116,7 @@ class CreatController extends Controller
            $catalog->save();
 
             }
+           return redirect('/');
 
     }
 
