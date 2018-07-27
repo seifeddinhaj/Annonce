@@ -26,7 +26,7 @@ class SubCatController extends BaseController
         ->select('*' )
         ->where('categories_id','=',$id)*/
 
-        ->get();
+        //->get();
         $qq=DB::table('annonces')
         ->rightjoin('catalog', 'annonces.id', '=', 'catalog.annonce_id')
         ->select('annonces.*','catalog.urlimg','catalog.annonce_id' )

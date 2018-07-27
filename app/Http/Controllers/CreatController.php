@@ -116,14 +116,11 @@ return redirect('/login');
            $catalog->save();
 
             }
-<<<<<<< HEAD
-           return redirect('/');
 
-=======
             return redirect('/');
         }else
   return redirect('/login');
->>>>>>> c1bbc78f60f2be3d2844e65d4a02ed43136dcec0
+
     }
 
     /**
